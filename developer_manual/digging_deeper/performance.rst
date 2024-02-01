@@ -60,17 +60,17 @@ If you increase the long_query_time to 100 and add log-queries-not-using-indexes
   slow_query_log_file = /var/log/mysql/mysql-slow.log
   long_query_time=100
 
-Cached data
-^^^^^^^^^^^
-
-Starting from Nextcloud 26, user and group display names now are cached. Use the ``IUserManager::getDisplayName`` or ``IGroupManager::getDisplayName`` functions to avoid roundtrips to the database.
-
 Measuring performance
 ^^^^^^^^^^^^^^^^^^^^^
 
 If you do bigger changes in the architecture or the database structure you should always double check the positive or negative performance impact.
 
 The recommendation is to automatically do 10000 PROPFINDs or file uploads, measure the time and compare the time before and after the change.
+
+Cached data
+-----------
+
+Starting from Nextcloud 26, user and group display names now are cached. Use the ``IUserManager::getDisplayName`` or ``IGroupManager::getDisplayName`` functions to avoid roundtrips to the database.
 
 Getting help
 ------------
